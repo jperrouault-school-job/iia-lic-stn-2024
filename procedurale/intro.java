@@ -123,3 +123,49 @@ Integer[][] monTab = {
 };
 
 print(monTab[1][0]); // Affichera 4
+
+
+
+
+
+// Les fonctions : blocs d'instructions qu'on peut rappeler autant de fois que nécessaire
+// > Une fonction peut avoir 0, 1 ou n paramètres (qu'on appelle arguments)
+// > Une fonction peut retourner 0 ou 1 valeur (valeur de retour)
+
+// > Une fonction est définie par sa signature
+// >> Type de retour nom(type arg1, type arg2, ...)
+
+Integer additionner(Integer a, Integer b, Integer c) {
+    Integer resultat = a + b + c;
+
+    return resultat;
+}
+
+// Pour appeler la fonction (l'exécuter)
+Integer ab = additionner(5, 10, 5);
+
+void afficher(String laPhrase) {
+    print(laPhrase);
+}
+
+afficher("La phrase");
+
+// Mettre la somme du tableau en fonction qu'on appelera "somme"
+// > Attendre en paramètre le tableau à sommer
+// > Retourner le résultat des opérations
+Integer somme(Integer[] leTab) {
+    Integer resultat = 0;
+    
+    for (Integer i = 0; i < leTab.length; i++) {
+        resultat = resultat + leTab[i];
+    }
+
+    return resultat;
+}
+
+Integer[] monTab = { 5, 4, 10, 3, 14 };
+Integer[] monTab2 = { 10, 3, 18, 56 };
+
+print( somme(monTab) );
+print( somme(monTab2) );
+
