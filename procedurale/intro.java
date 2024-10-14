@@ -71,11 +71,22 @@ Charactere c = 'c';
 // Les tableaux 1D :
 Integer[] monTab = new Integer[5];
 
-Integer[] monTab = { 4, 10, 5, 3, 7, 123 };
+Integer[] monTab = { 4, 10, 5, 3, 7 };
 
 print(monTab[1]);
 
 // Exercice : Afficher dans jshell chaque valeur du tableau
+// Avec For
+for (Integer i = 0; i < monTab.length; i++) {
+    print(monTab[i]);
+}
+
+// Avec While
+Integer i = 0;
+while (i < monTab.length) {
+    print(monTab[i]);
+    i++;
+}
 
 
 // Les tableaux 2D :
