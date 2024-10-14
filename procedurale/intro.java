@@ -71,7 +71,7 @@ Charactere c = 'c';
 // Les tableaux 1D :
 Integer[] monTab = new Integer[5];
 
-Integer[] monTab = { 4, 10, 5, 3, 7 };
+Integer[] monTab = { 2, 5, 5, 3, 7 };
 
 print(monTab[1]);
 
@@ -85,8 +85,15 @@ for (Integer i = 0; i < monTab.length; i++) {
 Integer i = 0;
 while (i < monTab.length) {
     print(monTab[i]);
+
+    if (monTab[i] == monTab[2]) {
+        print("OK !");
+    }
+
     i++;
 }
+
+// Dans l'exercice précédent, afficher un message "OK !" quand l'index = 2
 
 
 // Les tableaux 2D :
