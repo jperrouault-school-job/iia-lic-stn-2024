@@ -169,3 +169,40 @@ Integer[] monTab2 = { 10, 3, 18, 56 };
 print( somme(monTab) );
 print( somme(monTab2) );
 
+
+// Soit le tableau suivant :
+Integer[][] grille = {
+    { 1, 0, 1 },
+    { 2, 1, 2 },
+    { 2, 2, 0 }
+};
+
+// Ecrire une fonction qui permet de déterminer si on a un gagnant, et QUI a gagné
+// ET = &&
+// OU = ||
+Integer verifierGagnant() {
+    for (Integer i = 0; i < 3; i++) {
+        // Vérifier chaque ligne
+        if (grille[i][0] == grille[i][1] && grille[i][1] == grille[i][2] && grille[i][0] != 0) {
+            return grille[i][0];
+        }
+        
+        // Vérifier chaque colonne
+        if (grille[0][i] == grille[1][i] && grille[1][i] == grille[2][i] && grille[0][i] != 0) {
+            return grille[0][i];
+        }
+    }
+    
+    // Vérifier les diagonales
+    if (grille[0][0] == grille[1][1] && grille[1][1] == grille[2][2] && grille[0][0] != 0) {
+        return grille[0][0];
+    }
+
+    if (grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0] && grille[0][2] != 0) {
+        return grille[0][2];
+    }
+
+    return 0; // Pas de gagnant
+}
+
+verifierGagnant();
