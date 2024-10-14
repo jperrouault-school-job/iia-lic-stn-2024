@@ -100,6 +100,19 @@ while (i < monTab.length) {
     i++;
 }
 
+// Exercice faire la somme de tous les entiers, puis afficher le résultat
+Integer[] monTab = { 5, 4, 10, 3, 14 };
+
+// monTab[0] + monTab[1] + monTab[2] + monTab[3];
+
+Integer resultat = 0;
+
+for (Integer i = 0; i < monTab.length; i++) {
+    resultat = resultat + monTab[i];
+}
+
+print(resultat);
+
 
 
 // Les tableaux 2D :
