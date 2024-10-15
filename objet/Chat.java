@@ -11,6 +11,10 @@ public class Chat extends Animal {
         this.nom = nom;
     }
 
+    public Chat() {
+        System.out.println("CREATION D'UNE CHAT");
+    }
+
     public Chat(String nom) {
         System.out.println("CREATION DU CHAT " + nom);
         this.nom = nom;
