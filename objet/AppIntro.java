@@ -4,21 +4,23 @@ public class AppIntro {
 
     public static void main(String[] args) {
         Personne jeremy = new Personne();
+        Personne albert = new Personne();
 
-        jeremy.nom = "PERROUAULT";
-        jeremy.prenom = "Jérémy";
-        jeremy.age = 27;
+        jeremy.setNom("PERROUAULT");
+        jeremy.setPrenom("Jérémy");
+        jeremy.setAge(27);
 
-        System.out.println(jeremy.prenom + ", " + jeremy.age + " ans.");
+        System.out.println(jeremy.getAge());
+        jeremy.setAge(-50);
+        System.out.println(jeremy.getAge());
+
+        albert.setPrenom("Albert");
+
+        jeremy.ecrireQuelquechose();
+        albert.ecrireQuelquechose();
+
+        System.out.println(jeremy.getPrenom() + ", " + jeremy.getAge() + " ans.");
     }
-
-    Crayon crayonBleu = new Crayon();
-
-    // crayonBleu.couleur = 1;
-    // crayonBleu.epaisseur = 2;
-    // crayonBleu.niveauEncre = 0;
-
-
 
     
 }
