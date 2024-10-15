@@ -1,6 +1,6 @@
 package objet;
 
-public class Chat extends Animal {
+public class Chat extends Chasseur {
     private String nom;
 
     public String getNom() {
@@ -31,5 +31,10 @@ public class Chat extends Animal {
     @Override
     public String toString() {
         return "Le chat " + this.nom;
+    }
+
+    @Override
+    public void chasser() {
+        System.out.println("Le chat " + this.nom + " joue avec sa nourriture ...");
     }
 }
