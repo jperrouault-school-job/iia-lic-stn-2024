@@ -36,6 +36,14 @@ public class Personne {
         }
     }
 
+    // Constructeur pour une Personne
+    public Personne(String nom, String prenom, Integer age) {
+        System.out.println("CREATION D'UNE PERSONNE");
+        this.nom = nom;
+        this.prenom = prenom;
+        this.setAge(age);
+    }
+
     public void ecrireQuelquechose() {
         System.out.println(this.prenom + " écrit quelque chose ...");
     }
