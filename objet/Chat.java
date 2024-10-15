@@ -15,4 +15,8 @@ public class Chat {
         System.out.println("CREATION DU CHAT " + nom);
         this.nom = nom;
     }
+
+    public void manger() {
+        System.out.println("Le chat " + this.nom + " mange ...");
+    }
 }

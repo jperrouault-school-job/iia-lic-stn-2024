@@ -5,5 +5,7 @@ public class AppZoo {
         Chat pica = new Chat("Pica");
 
         System.out.println(pica.getNom());
+
+        pica.manger();
     }
 }
