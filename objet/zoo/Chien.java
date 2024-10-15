@@ -1,4 +1,4 @@
-package objet;
+package objet.zoo;
 
 public class Chien extends Chasseur {
     public void dormir() {

@@ -1,4 +1,4 @@
-package objet;
+package objet.zoo;
 
 public abstract class Animal {
     public Animal() {

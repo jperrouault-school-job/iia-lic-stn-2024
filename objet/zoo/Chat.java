@@ -1,4 +1,4 @@
-package objet;
+package objet.zoo;
 
 public class Chat extends Chasseur {
     private String nom;

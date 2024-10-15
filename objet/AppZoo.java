@@ -1,5 +1,9 @@
 package objet;
 
+import objet.zoo.Animal;
+import objet.zoo.Chasseur;
+import objet.zoo.Chat;
+
 public class AppZoo {
     public static void main(String[] args) {
         Chasseur pica = new Chat("Pica");
