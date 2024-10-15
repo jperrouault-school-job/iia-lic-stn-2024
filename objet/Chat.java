@@ -1,6 +1,6 @@
 package objet;
 
-public class Chat {
+public class Chat extends Animal {
     private String nom;
 
     public String getNom() {
@@ -18,5 +18,14 @@ public class Chat {
 
     public void manger() {
         System.out.println("Le chat " + this.nom + " mange ...");
+    }
+
+    public void dormir() {
+        System.out.println("Le chat " + this.nom + " dort dans son panier neuf ...");    
+    }
+
+    @Override
+    public String toString() {
+        return "Le chat " + this.nom;
     }
 }
