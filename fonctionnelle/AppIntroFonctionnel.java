@@ -3,6 +3,7 @@ package fonctionnelle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 
 public class AppIntroFonctionnel {
@@ -87,6 +88,22 @@ public class AppIntroFonctionnel {
             .filter(prenom -> prenom.length() == 6)
             .forEach(System.out::println)
         ;
+
+
+        // Somme des éléments d'une liste
+        List<Integer> maListeEntiers = List.of(8, 9, 10, 50, 47, 63);
+
+        Integer sommeListe = maListeEntiers.stream()
+            .reduce(0, (total, valeur) -> total + valeur)
+        ;
+
+        System.out.println(sommeListe);
+
+        BinaryOperator<Integer> leReduce = (total, valeur) -> total + valeur;
+
+        sommeListe = maListeEntiers.stream().reduce(-10, leReduce);
+
+        System.out.println(sommeListe);
     }
 
     static void demoFonction(BiFunction<Integer, Integer, Integer> fonctionAExecuterPlusTard) {
