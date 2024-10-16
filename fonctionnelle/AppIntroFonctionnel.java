@@ -76,6 +76,17 @@ public class AppIntroFonctionnel {
         for (String prenom : prenoms) {
             aExecuterPlusTard.accept(prenom);
         }
+
+        prenoms.forEach(aExecuterPlusTard);
+        prenoms.forEach(System.out::println);
+        prenoms.forEach(prenom -> System.out.println(prenom));
+        
+        // Exercice : afficher que les prénoms qui ont 6 lettres
+        prenoms.stream()
+            // On filtre chaque prénom
+            .filter(prenom -> prenom.length() == 6)
+            .forEach(System.out::println)
+        ;
     }
 
     static void demoFonction(BiFunction<Integer, Integer, Integer> fonctionAExecuterPlusTard) {
