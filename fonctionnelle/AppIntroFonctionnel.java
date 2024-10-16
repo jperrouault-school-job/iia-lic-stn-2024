@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class AppIntroFonctionnel {
     public static void main(String[] args) {
@@ -104,6 +105,20 @@ public class AppIntroFonctionnel {
         sommeListe = maListeEntiers.stream().reduce(-10, leReduce);
 
         System.out.println(sommeListe);
+
+
+        Function<String, String> demander = texte -> {
+            System.out.println("Saisir " + texte + " :");
+
+            return System.console().readLine();
+        };
+
+        Function<String, String> demanderV2 = SystemUtils::demander;
+
+        String x = demander.apply("La valeur de X");
+        String y = demander.apply("La valeur de Y");
+
+        System.out.println("Saisie : " + x + " et " + y);
     }
 
     static void demoFonction(BiFunction<Integer, Integer, Integer> fonctionAExecuterPlusTard) {
