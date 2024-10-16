@@ -35,6 +35,23 @@ public class AppIntroFonctionnel {
         };
         
         demoFonction(minusFunction);
+
+        demoFonction((a, b) -> {
+            return a / b + 1;
+        });
+
+        demoFonction((a, b) -> a / b + 8);
+
+
+
+
+        // MaPropreInterfaceFonctionnelle monIface = (a, b, c) -> {
+        //     return "la chaine " + (a + b / c);
+        // };
+        MaPropreInterfaceFonctionnelle monIface = (a, b, c) -> "la chaine " + (a + b / c);
+
+        String leResultat = monIface.avecTroisParametres(8, 4, 9);
+        System.out.println(leResultat);
     }
 
     static void demoFonction(BiFunction<Integer, Integer, Integer> fonctionAExecuterPlusTard) {
