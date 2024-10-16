@@ -25,6 +25,28 @@ public class App {
         Thread.sleep(1000);
         monSink.tryEmitNext(500);
 
+
+        // Créer 2 Sinks d'entiers : "aSink", "bSink"
+        Sinks.Many<Integer> aSink = Sinks.many().multicast().directAllOrNothing();
+        Sinks.Many<Integer> bSink = Sinks.many().multicast().directAllOrNothing();
+
+        // On va générer un nouveau Flux à partir des 2 Sinks aSink & bSink
+        Flux<Integer> laSomme = Flux.combineLatest(
+            aSink.asFlux(),
+            bSink.asFlux(),
+            (a, b) -> a + b
+        );
+
+        // On va s'inscrire à ce nouveau Flux laSomme
+        laSomme.subscribe(resultat -> System.out.println("Le nouveau résultat est : " + resultat));
+
+        // Emettre dans "a" 3, dans "b" 8, puis dans "a" émettre 10
+        aSink.tryEmitNext(3);
+
+        bSink.tryEmitNext(8);
+        
+        aSink.tryEmitNext(10);
+
         Thread.sleep(20000);
     }
 }
