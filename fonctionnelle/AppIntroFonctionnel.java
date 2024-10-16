@@ -1,6 +1,9 @@
 package fonctionnelle;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 
 public class AppIntroFonctionnel {
     public static void main(String[] args) {
@@ -52,6 +55,27 @@ public class AppIntroFonctionnel {
 
         String leResultat = monIface.avecTroisParametres(8, 4, 9);
         System.out.println(leResultat);
+
+
+
+
+        List<String> prenoms = new ArrayList<>();
+
+        prenoms.add("Jérémy");
+        prenoms.add("Maxens");
+        prenoms.add("Maxence");
+        prenoms.add("Marine");
+        prenoms.add("Léo");
+
+        for (String prenom : prenoms) {
+            System.out.println(prenom);
+        }
+
+        Consumer<String> aExecuterPlusTard = System.out::println;
+
+        for (String prenom : prenoms) {
+            aExecuterPlusTard.accept(prenom);
+        }
     }
 
     static void demoFonction(BiFunction<Integer, Integer, Integer> fonctionAExecuterPlusTard) {
