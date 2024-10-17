@@ -6,5 +6,6 @@ felin(chat).
 felin(tigre).
 
 % Les règles
-animal(X) :- canide(X).
-animal(X) :- felin(X).
+% animal(X) :- canide(X).
+% animal(X) :- felin(X).
+animal(X) :- canide(X) ; felin(X).
